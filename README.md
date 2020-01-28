@@ -21,15 +21,25 @@ To run the image: `docker run --rm -it wesley-dean-flexion/genex pattern(s)`
 ## Examples
 
 ```
-# docker run --rm -it wesley-dean-flexion/genex 'fo{1,3}'
+# docker run --rm -it wesleydeanflexion/genex 'fo{1,3}'
 fooo,
 foo,
 fo
 
-# docker run --rm -it wesley-dean-flexion/genex '(Wes|Wesley) likes (Docker|Perl)'
-
+# docker run --rm -it wesleydeanflexion/genex '(Wes|Wesley) likes (Docker|Perl)'
+Wes likes Docker,
+Wes likes Perl,
+Wesley likes Docker,
+Wesley likes Perl
 ```
 
+## Alias
+
+It may be convenient to add an alias:
+
+```
+alias genex="docker run --rm -it wesleydeanflexion/genex"
+```
 
 ## References
 
