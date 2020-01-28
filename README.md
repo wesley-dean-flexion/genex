@@ -1,7 +1,7 @@
 # genex
 
 While searching for ways to make the Slackbot more flexible, I came across an
-article by Austin Pray <https://austinpray.com/> that mentioned how to use a
+article by Austin Pray that mentioned how to use a
 Perl module called 'Regexp-Genex' that would statically compile a list of
 strings that would match a given regular expression.  
 
@@ -41,7 +41,20 @@ It may be convenient to add an alias:
 alias genex="docker run --rm -it wesleydeanflexion/genex"
 ```
 
+Once that's set, one may run `genex` as if it was a command:
+
+```
+# genex 'Ready for (Slack|slack)(Bot|bot)!'
+Ready for SlackBot!,
+Ready for Slackbot!,
+Ready for slackBot!,
+Ready for slackbot!
+```
+
 ## References
+
+Austin Pray's website:
+<https://austinpray.com/>
 
 Austin's article:
 <https://austinpray.com/hacks/2015/04/16/using-regex-with-slackbot-responses.html>
